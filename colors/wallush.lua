@@ -1,6 +1,6 @@
 -- You probably always want to set this in your vim file
 vim.opt.background = 'dark'
-vim.g.colors_name = 'lush_template'
+vim.g.colors_name = 'wallush'
 
 -- By setting our module to nil, we clear lua's cache,
 -- which means the require ahead will *always* occur.
@@ -17,5 +17,5 @@ vim.g.colors_name = 'lush_template'
 package.loaded['lush_theme.lush_template'] = nil
 
 -- include our theme file and pass it to lush to apply
-require('lush')(require('lush_theme.lush_template'))
+require('lush')(require('lush_theme.wallush'))
 
