@@ -75,7 +75,7 @@ end
 
 local lush = require('lush')
 local hsl = lush.hsl
-
+-- defined colors
 local c1 = hsl(c.color1)
 local c2 = hsl(c.color2)
 local c3 = hsl(c.color3)
@@ -104,6 +104,14 @@ local cl7 = hsl(c.color7).li(30)
 local cl8 = hsl(c.color8).li(30)
 local cl9 = hsl(c.color9).li(30)
 
+local crd = hsl(0,30,25)
+local crl = hsl(0,30,40)
+local cgd = hsl(75,30,25)
+local cgl = hsl(75,30,40)
+local cyd = hsl(55,30,25)
+local cyl = hsl(55,30,40)
+local cyyd = hsl(55,70,20)
+local cyyl = hsl(55,70,40)
 local grey = hsl(0,0,65)
 local shade2 = hsl(50,50,50)
 
@@ -112,6 +120,7 @@ local shade2 = hsl(50,50,50)
 -- support an annotation like the following. Consult your server documentation.
 ---@diagnostic disable: undefined-global
 local theme = lush(function()
+    print('file loaded')
   return {
     -- The following are all the Neovim default highlight groups from the docs
     -- as of 0.5.0-nightly-446, to aid your theme creation. Your themes should
@@ -134,16 +143,16 @@ local theme = lush(function()
     CursorColumn { fg = cd6 }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
     CursorLine   { bg = cd9 }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
     Directory    { fg = c4 }, -- directory names (and other special names in listings)
-    DiffAdd      { bg = cl2, fg = cd2, gui = "bold" }, -- diff mode: Added line |diff.txt|
-    DiffChange   { bg = cl3, fg = cd3, gui = "bold" }, -- diff mode: Changed line |diff.txt|
-    DiffDelete   { bg = cl4, fg = cd4, gui = "bold"  }, -- diff mode: Deleted line |diff.txt|
-    DiffText     { bg = cl6, fg = cd5, gui = "bold" }, -- diff mode: Changed text within a changed line |diff.txt|
+    DiffAdd      { bg = cgd, fg = cgl, gui = "bold" }, -- diff mode: Added line |diff.txt|
+    DiffChange   { bg = cyd, fg = cyl, gui = "bold" }, -- diff mode: Changed line |diff.txt|
+    DiffDelete   { bg = crd, fg = crl, gui = "bold"  }, -- diff mode: Deleted line |diff.txt|
+    DiffText     { bg = cl6, fg = cd6, gui = "bold" }, -- diff mode: Changed text within a changed line |diff.txt|
     EndOfBuffer  { fg = c3, gui = "italic" }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
     -- TermCursor   { }, -- cursor in a focused terminal
     -- TermCursorNC { }, -- cursor in an unfocused terminal
     ErrorMsg     { bg = cd2, fg = c5 }, -- error messages on the command line
     VertSplit    { bg = cd9, fg = c1 }, -- the column separating vertically split windows
-    Folded       { bg = cd1, fg = cd7 }, -- line used for closed folds
+    Folded       { bg = c1, fg = cd7 }, -- line used for closed folds
     -- FoldColumn   { }, -- 'foldcolumn'
     -- SignColumn   { }, -- column where |signs| are displayed
     -- IncSearch    { }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
@@ -163,9 +172,10 @@ local theme = lush(function()
     PmenuSel     { bg = c4, fg = c.color0 }, -- Popup menu: selected item.
     PmenuSbar    { fg = c.color0, fg = c4  }, -- Popup menu: scrollbar.
     PmenuThumb   { fg = c4 }, -- Popup menu: Thumb of the scrollbar.
-    Question     { fg = c4, gui = "bolditalic" }, -- |hit-enter| prompt and yes/no questions
+    Question     { fg = cl4, gui = "bolditalic" }, -- |hit-enter| prompt and yes/no questions
     -- QuickFixLine { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
     Search       { bg = cl6, fg = c3, gui = "bolditalic" }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+
     SpecialKey   { fg = Directory.fg }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
     SpellBad     { sp = c1 ,gui = "boldundercurl" }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise. 
     SpellCap     { sp = c3, gui = "undercurl" }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
@@ -258,7 +268,7 @@ local theme = lush(function()
 
     -- Error          { }, -- (preferred) any erroneous construct
 
-    -- Todo           { }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+    Todo           { bg = cyyl, fg = cyyd, gui = "bold" }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
     -- These groups are for the native LSP client and diagnostic system. Some
     -- other LSP clients may use these groups, or use their own. Consult your
