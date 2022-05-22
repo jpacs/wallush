@@ -94,6 +94,7 @@ local cd6 = hsl(c.color6).da(30)
 local cd7 = hsl(c.color7).da(30)
 local cd8 = hsl(c.color8).da(30)
 local cd9 = hsl(c.color9).da(30)
+local cdd9 = hsl(c.color9).da(50)
 local cl1 = hsl(c.color1).li(30)
 local cl2 = hsl(c.color2).li(30)
 local cl3 = hsl(c.color3).li(30)
@@ -141,7 +142,7 @@ local theme = lush(function()
     -- lCursor      { }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
     -- CursorIM     { }, -- like Cursor, but used when in IME mode |CursorIM|
     CursorColumn { fg = cd6 }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
-    CursorLine   { bg = cd9 }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
+    CursorLine   { bg = cdd9 }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
     Directory    { fg = c4 }, -- directory names (and other special names in listings)
     DiffAdd      { bg = cgd, fg = cgl, gui = "bold" }, -- diff mode: Added line |diff.txt|
     DiffChange   { bg = cyd, fg = cyl, gui = "bold" }, -- diff mode: Changed line |diff.txt|
