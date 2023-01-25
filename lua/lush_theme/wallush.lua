@@ -85,32 +85,32 @@ local c6 = hsl(c.color6)
 local c7 = hsl(c.color7)
 local c8 = hsl(c.color8)
 local c9 = hsl(c.color9)
-local cd1 = hsl(c.color1).da(30)
-local cd2 = hsl(c.color2).da(30)
-local cd3 = hsl(c.color3).da(30)
-local cd4 = hsl(c.color4).da(30)
-local cd5 = hsl(c.color5).da(30)
-local cd6 = hsl(c.color6).da(30)
-local cd7 = hsl(c.color7).da(30)
-local cd8 = hsl(c.color8).da(30)
-local cd9 = hsl(c.color9).da(30)
-local cdd9 = hsl(c.color9).da(50)
-local cl1 = hsl(c.color1).li(30)
-local cl2 = hsl(c.color2).li(30)
-local cl3 = hsl(c.color3).li(30)
-local cl4 = hsl(c.color4).li(30)
-local cl5 = hsl(c.color5).li(30)
-local cl6 = hsl(c.color6).li(30)
-local cl7 = hsl(c.color7).li(30)
-local cl8 = hsl(c.color8).li(30)
-local cl9 = hsl(c.color9).li(30)
+local cd1 = c1.da(30)
+local cd2 = c2.da(30)
+local cd3 = c3.da(30)
+local cd4 = c4.da(30)
+local cd5 = c5.da(30)
+local cd6 = c6.da(30)
+local cd7 = c7.da(30)
+local cd8 = c8.da(30)
+local cd9 = c9.da(30)
+local cdd9 = c9.da(60)
+local cl1 = c1.li(30)
+local cl2 = c2.li(30)
+local cl3 = c3.li(30)
+local cl4 = c4.li(30)
+local cl5 = c5.li(30)
+local cl6 = c6.li(30)
+local cl7 = c7.li(30)
+local cl8 = c8.li(30)
+local cl9 = c9.li(30)
 
-local crd = hsl(0,30,25)
-local crl = hsl(0,30,40)
-local cgd = hsl(75,30,25)
-local cgl = hsl(75,30,40)
-local cyd = hsl(55,30,25)
-local cyl = hsl(55,30,40)
+local crd = hsl(0,30,35)
+local crl = hsl(0,60,65)
+local cgd = hsl(75,30,35)
+local cgl = hsl(75,60,60)
+local cyd = hsl(55,30,35)
+local cyl = hsl(55,65,65)
 local cyyd = hsl(55,70,20)
 local cyyl = hsl(55,70,40)
 local grey = hsl(0,0,65)
@@ -136,7 +136,7 @@ local theme = lush(function()
     -- or leave them commented to apply vims default colouring or linking.
 
     Comment      { fg = c8, gui = "italic" }, -- any comment
-    ColorColumn  { bg = cd9, fg = c4 }, -- used for the columns set with 'colorcolumn'
+    ColorColumn  { bg = cdd9, fg = c4 }, -- used for the columns set with 'colorcolumn'
     Conceal      { }, -- placeholder characters substituted for concealed text (see 'conceallevel')
     Cursor       { bg = cd1, fg = c3 }, -- character under the cursor
     -- lCursor      { }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
@@ -211,9 +211,9 @@ local theme = lush(function()
     Function       { fg = c1, gui = "bolditalic" }, -- function name (also: methods for classes)
 
     Statement      { fg = c3 }, -- (preferred) any statement
-    Conditional    { fg = c3, gui = "bolditalic" }, --  if, then, else, endif, switch, etc.
-    Repeat         { fg = c3, gui = "bolditalic" }, --   for, do, while, etc.
-    Label          { fg = c3, gui = "underline"  }, --    case, default, etc.
+    Conditional    { fg = cl3, gui = "bolditalic" }, --  if, then, else, endif, switch, etc.
+    Repeat         { fg = cd3, gui = "bolditalic" }, --   for, do, while, etc.
+    Label          { fg = cl3, gui = "underline"  }, --    case, default, etc.
     Operator       { fg = c3  }, -- "sizeof", "+", "*", etc.
     Keyword        { fg = c3  }, --  any other keyword
     Exception      { fg = c3, gui = "bold"  }, --  try, catch, throw
