@@ -257,6 +257,8 @@ local theme = lush(function()
     IndentBlanklineIndent4 { fg = c4 },
     IndentBlanklineIndent5 { fg = c5 },
     IndentBlanklineIndent6 { fg = c6 },
+    BufferFocused { bg = c6, fg = c1, gui = "bold" },
+    BufferUnfocused{ bg = c1 ,fg = c6 },
     -- End of added groups
 
 
