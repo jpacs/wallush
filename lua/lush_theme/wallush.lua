@@ -236,7 +236,7 @@ local theme = lush(function()
     -- SpecialComment { }, -- special things inside a comment
     -- Debug          { }, --    debugging statements
 
-    -- Added more Groups
+    -- Plugins/Custom Groups
     htmlTag       { fg = c7, gui = "bold" },
     htmlEndTag    { fg = c7, gui = "bold" },
     -- htmlTagName  { },
@@ -249,16 +249,30 @@ local theme = lush(function()
     -- htmlH4       { },
     -- htmlH5       { },
     -- htmlH6       { },
+    -- NerdTree
     NERDTreeDirSlash { fg = c4 },
     NERDTreeExecFile { fg = c7 },
+    -- IndentBlanklineIndent 
     IndentBlanklineIndent1 { fg = c1 },
     IndentBlanklineIndent2 { fg = c2 },
     IndentBlanklineIndent3 { fg = c3 },
     IndentBlanklineIndent4 { fg = c4 },
     IndentBlanklineIndent5 { fg = c5 },
     IndentBlanklineIndent6 { fg = c6 },
+    -- Custom for Lualine Buffers
     BufferFocused { bg = c6, fg = c1, gui = "bold,underline" },
-    BufferUnfocused{ bg = c1.da(10) ,fg = c6.da(10) },
+    BufferUnfocused { bg = c1.da(10) ,fg = c6.da(10) },
+    -- Noice general
+    NoiceCmdline { fg = c6 },
+    NoiceCmdlineIcon { fg = c6 },
+    NoiceCmdlineIconLua { fg = c6 },
+    NoiceCmdlineIconSearch { fg = c6 },
+    NoiceCmdlinePopupBorder { fg = c3 },
+    NoiceCmdlinePopupBorderSearch { fg = c4 },
+    NoicePopupmenuMatch { fg = c6 },
+    NoiceCompletionItemKindDefault { fg = c2 },
+    NoiceCompletionItemWord { fg = c2 },
+    NoiceVirtualText { bg = c1.da(70), fg = c3 },
     -- End of added groups
 
 
