@@ -136,7 +136,7 @@ local theme = lush(function()
     -- or leave them commented to apply vims default colouring or linking.
 
     Comment      { fg = c8, gui = "italic" }, -- any comment
-    ColorColumn  { bg = cdd9, fg = c4 }, -- used for the columns set with 'colorcolumn'
+    ColorColumn  { bg = cdd9, fg = c4, gui = "bold" }, -- used for the columns set with 'colorcolumn'
     Conceal      { }, -- placeholder characters substituted for concealed text (see 'conceallevel')
     Cursor       { bg = cd1, fg = c3 }, -- character under the cursor
     -- lCursor      { }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
@@ -167,11 +167,11 @@ local theme = lush(function()
     MoreMsg      { fg = Question.fg }, -- |more-prompt|
     NonText      { fg = c8 }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
     Normal       { fg = c5.li(50) }, -- normal text
-    NormalFloat  { bg = c4, fg = c9 }, -- Normal text in floating windows.
+    NormalFloat  { bg = c4, fg = c7 }, -- Normal text in floating windows.
     -- NormalN     { }, -- normal text in non-current windows
-    Pmenu        { bg = c1, fg = c7 }, -- Popup menu: normal item.
-    PmenuSel     { bg = c4, fg = c.color0 }, -- Popup menu: selected item.
-    PmenuSbar    { fg = c.color0, fg = c4  }, -- Popup menu: scrollbar.
+    Pmenu        { bg = c7, fg = c7 }, -- Popup menu: normal item.
+    PmenuSel     { bg = c4, fg = c7 }, -- Popup menu: selected item.
+    PmenuSbar    { bg = c6, fg = c4 }, -- Popup menu: scrollbar.
     PmenuThumb   { fg = c4 }, -- Popup menu: Thumb of the scrollbar.
     Question     { fg = cl4, gui = "bolditalic" }, -- |hit-enter| prompt and yes/no questions
     -- QuickFixLine { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
@@ -189,10 +189,10 @@ local theme = lush(function()
     -- TabLineSel   { }, -- tab pages line, active tab page label
     Title        { fg = c6 }, -- titles for output from ":set all", ":autocmd" etc.
     Visual       { bg = c2, fg = c7 }, -- Visual mode selection
-    VisualNOS    { bg = c6, fg = c8 }, -- Visual mode selection when vim is "Not Owning the Selection".
+    VisualNOS    { bg = c2, fg = c8 }, -- Visual mode selection when vim is "Not Owning the Selection".
     WarningMsg   { bg = c7 , fg = c3, gui = "bold"}, -- warning messages
     Whitespace   { fg = c7 }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
-    -- WildMenu     { }, -- current match in 'wildmenu' completion
+    WildMenu     { bg = c1, fg = c7 }, -- current match in 'wildmenu' completion
 
     -- These groups are not listed as default vim groups,
     -- but they are defacto standard group names for syntax highlighting.
