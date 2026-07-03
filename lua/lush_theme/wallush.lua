@@ -113,7 +113,12 @@ local cyd = hsl(55,30,35)
 local cyl = hsl(55,65,65)
 local cyyd = hsl(55,70,20)
 local cyyl = hsl(55,70,40)
-local grey = hsl(0,0,65)
+local cbbd = hsl(228,70,30)
+local cbd = hsl(228,60,50)
+local cbl = hsl(228,90,70)
+local blk = hsl(0,0,0)
+local cdg = hsl(0,0,10)
+local cg = hsl(0,0,65)
 local shade2 = hsl(50,50,50)
 
 
@@ -156,8 +161,8 @@ local theme = lush(function()
     Folded       { bg = c1, fg = cd7 }, -- line used for closed folds
     -- FoldColumn   { }, -- 'foldcolumn'
     -- SignColumn   { }, -- column where |signs| are displayed
-    -- IncSearch    { }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
-    -- Substitute   { }, -- |:substitute| replacement text highlighting
+    IncSearch    { bg = cbbd, fg = cbl, gui = "underline" }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+    Substitute   { bg = cbd, fg = cbl }, -- |:substitute| replacement text highlighting
     LineNr       { fg = c4 }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     CursorLineNr { bg = cd9, fg = cl4.li(15) }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     MatchParen   { bg = cd3, fg = c4 }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
@@ -175,7 +180,7 @@ local theme = lush(function()
     PmenuThumb   { fg = c4 }, -- Popup menu: Thumb of the scrollbar.
     Question     { fg = cl4, gui = "bolditalic" }, -- |hit-enter| prompt and yes/no questions
     -- QuickFixLine { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-    Search       { bg = cl6, fg = c3, gui = "bolditalic" }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+    Search       { bg = cbd, fg = cbl, gui = "bolditalic" }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
 
     SpecialKey   { fg = Directory.fg }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
     SpellBad     { sp = c1 ,gui = "boldundercurl" }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise. 
