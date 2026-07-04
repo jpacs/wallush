@@ -174,7 +174,7 @@ local theme = lush(function()
     Normal       { fg = c5.li(50) }, -- normal text
     NormalFloat  { bg = c4, fg = c7 }, -- Normal text in floating windows.
     -- NormalN     { }, -- normal text in non-current windows
-    Pmenu        { bg = c7, fg = c7 }, -- Popup menu: normal item.
+    Pmenu        { bg = c7, fg = c2 }, -- Popup menu: normal item.
     PmenuSel     { bg = c4, fg = c7 }, -- Popup menu: selected item.
     PmenuSbar    { bg = c6, fg = c4 }, -- Popup menu: scrollbar.
     PmenuThumb   { fg = c4 }, -- Popup menu: Thumb of the scrollbar.
