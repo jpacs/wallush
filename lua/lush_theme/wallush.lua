@@ -127,6 +127,7 @@ local cg4 = hsl(0,0,55)
 local cg5 = hsl(0,0,45)
 local cg6 = hsl(0,0,35)
 local cg7 = hsl(0,0,25)
+local cg8 = hsl(0,0,15)
 local shade2 = hsl(50,50,50)
 
 
@@ -273,8 +274,8 @@ local theme = lush(function()
     IndentBlanklineIndent5 { fg = c5 },
     IndentBlanklineIndent6 { fg = c6 },
     -- Custom for Lualine Buffers
-    BufferFocused { bg = c6, fg = wht, gui = "bold" },
-    BufferUnfocused { bg = c1 ,fg = blk },
+    BufferFocused { bg = c6, fg = cg1, gui = "bold" },
+    BufferUnfocused { bg = c1 ,fg = cg8, gui = "bold" },
     --BufferFocused { bg = c6, fg = wht, gui = "bold,underline" },
     --BufferUnfocused { bg = cd1 ,fg = cl6 },
     -- Noice general
