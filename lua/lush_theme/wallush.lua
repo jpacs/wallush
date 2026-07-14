@@ -117,8 +117,16 @@ local cbbd = hsl(228,70,30)
 local cbd = hsl(228,60,50)
 local cbl = hsl(228,90,70)
 local blk = hsl(0,0,0)
+local wht = hsl(0,100,100)
 local cdg = hsl(0,0,10)
-local cg = hsl(0,0,65)
+local cg  = hsl(0,0,95)
+local cg1 = hsl(0,0,85)
+local cg2 = hsl(0,0,75)
+local cg3 = hsl(0,0,65)
+local cg4 = hsl(0,0,55)
+local cg5 = hsl(0,0,45)
+local cg6 = hsl(0,0,35)
+local cg7 = hsl(0,0,25)
 local shade2 = hsl(50,50,50)
 
 
@@ -265,8 +273,10 @@ local theme = lush(function()
     IndentBlanklineIndent5 { fg = c5 },
     IndentBlanklineIndent6 { fg = c6 },
     -- Custom for Lualine Buffers
-    BufferFocused { bg = c6, fg = c1, gui = "bold,underline" },
-    BufferUnfocused { bg = c1.da(10) ,fg = c6.da(10) },
+    BufferFocused { bg = c6, fg = wht, gui = "bold" },
+    BufferUnfocused { bg = c1 ,fg = blk },
+    --BufferFocused { bg = c6, fg = wht, gui = "bold,underline" },
+    --BufferUnfocused { bg = cd1 ,fg = cl6 },
     -- Noice general
     NoiceCmdline { fg = c6 },
     NoiceCmdlineIcon { fg = c6 },
