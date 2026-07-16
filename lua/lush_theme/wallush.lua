@@ -274,8 +274,8 @@ local theme = lush(function()
     IndentBlanklineIndent5 { fg = c5 },
     IndentBlanklineIndent6 { fg = c6 },
     -- Custom for Lualine Buffers
-    BufferFocused { bg = c6.da(10), fg = cg1, gui = "bold" },
-    BufferUnfocused { bg = c1.li(10) ,fg = cg8, gui = "bold" },
+    BufferFocused { bg = c6, fg = cg8, gui = "bold" },
+    BufferUnfocused { bg = c1 ,fg = cg8, gui = "bold,italic" },
     --BufferFocused { bg = c6, fg = wht, gui = "bold,underline" },
     --BufferUnfocused { bg = cd1 ,fg = cl6 },
     -- Noice general
